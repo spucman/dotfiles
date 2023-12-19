@@ -26,3 +26,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+
+-- move stuff around
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Cursor stays in the middle
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- copy in system clipboard : asbjornHaland
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
