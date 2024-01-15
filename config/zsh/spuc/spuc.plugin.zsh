@@ -4,7 +4,7 @@ fport() { lsof -nP -i4TCP:"$1" | grep LISTEN }
 
 alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Command}}\t{{.Status}}\t{{.Ports}}"'
 alias dsa='docker stop $(docker ps -a -q)'
-alias encPriv='encfs -v ~/_priv/pCloud/privEnc ~/Private'
+alias encPriv='gocryptfs ~/_priv/pCloud/enc ~/Private'
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
