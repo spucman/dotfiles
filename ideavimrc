@@ -1,0 +1,29 @@
+let mapleader=" "
+
+""" Plugins -------------------
+set which-key
+
+
+""" Common settings ------------
+set number
+set relativenumber
+set scrolloff=8
+set incsearch
+
+""" Mappings =================
+
+nmap <leader>sf <Action>(GotoFile)
+nmap <leader>sc <Action>(GotoClass)
+nmap <leader>s/ <Action>(Find)
+nmap <leader>sw <Action>(FindInPath)
+nmap <leader>o <Action>(OptimizeImports)
+nmap <leader>f <Action>(ReformatCode)
+
+vmap J :m '>+1<CR>gv=gv
+vmap K :m '<-2<CR>gv=gv
+
+nmap n nzzzv
+nmap N Nzzzv
+
+map <leader>y [["+y]]
+map <leader>Y [["+Y]]
