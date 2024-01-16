@@ -42,7 +42,7 @@ CASE_SENSITIVE="true"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(gitfast tmux spuc tmlr)
+plugins=(gitfast tmux spuc)
 
 source $ZSH/oh-my-zsh.sh
 
