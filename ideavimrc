@@ -18,6 +18,8 @@ nmap <leader>s/ <Action>(Find)
 nmap <leader>sw <Action>(FindInPath)
 nmap <leader>o <Action>(OptimizeImports)
 nmap <leader>f <Action>(ReformatCode)
+nmap <leader>hm <Action>(ToggleBookmarkWithMnemonic)
+nmap <leader>ha <Action>(ShowTypeBookmarks)
 
 vmap J :m '>+1<CR>gv=gv
 vmap K :m '<-2<CR>gv=gv
