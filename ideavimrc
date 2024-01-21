@@ -20,6 +20,16 @@ nmap <leader>o <Action>(OptimizeImports)
 nmap <leader>f <Action>(ReformatCode)
 nmap <leader>hm <Action>(ToggleBookmarkWithMnemonic)
 nmap <leader>ha <Action>(ShowTypeBookmarks)
+nmap <leader>hr <Action>(ToggleBookmark)
+nmap <leader>h1 <Action>(GotoBookmark1)
+nmap <leader>h2 <Action>(GotoBookmark2)
+nmap <leader>h3 <Action>(GotoBookmark3)
+nmap <leader>h4 <Action>(GotoBookmark4)
+nmap <leader>h5 <Action>(GotoBookmark5)
+nmap <leader>h6 <Action>(GotoBookmark6)
+nmap <leader>h7 <Action>(GotoBookmark7)
+nmap <leader>h8 <Action>(GotoBookmark8)
+nmap <leader>h9 <Action>(GotoBookmark9)
 
 vmap J :m '>+1<CR>gv=gv
 vmap K :m '<-2<CR>gv=gv
