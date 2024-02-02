@@ -90,6 +90,7 @@ return {
         rust_analyzer = {},
         tsserver = {},
         html = {},
+        htmx = {},
         -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
         lua_ls = {
