@@ -23,4 +23,4 @@ abk=(
 #A# end
 )
 
-export PATH="/usr/local/sbin:/Users/spuchmann/bin:/usr/local/opt/python@3.8/libexec/bin:/Applications/pgAdmin\ 4.app/Contents/SharedSupport:$PATH"
+export PATH="/usr/local/go/bin:/usr/local/sbin:/Users/spuchmann/bin:/usr/local/opt/python@3.8/libexec/bin:/Applications/pgAdmin\ 4.app/Contents/SharedSupport:$PATH"
