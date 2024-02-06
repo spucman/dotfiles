@@ -85,14 +85,12 @@ return {
 
       local servers = {
         -- clangd = {},
-        -- gopls = {},
+        gopls = {},
         -- pyright = {},
         rust_analyzer = {},
         tsserver = {},
         html = {},
         htmx = {},
-        -- html = { filetypes = { 'html', 'twig', 'hbs'} },
-
         lua_ls = {
           Lua = {
             workspace = { checkThirdParty = false },
