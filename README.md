@@ -1,3 +1,7 @@
 # dotfiles
 
-- ripgrep must be installed!
+
+To Install:
+
+- ripgrep
+- gocryptfs
