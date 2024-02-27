@@ -16,18 +16,20 @@ sudo apt install -y zsh\
     glogg\
     gzip\
     libfuse2\
-    fd-find
+    fd-find\
+    xsel
 
 ### Install snap
+
+sudo snap install --classic codium
+sudo snap install --classic intellij-idea-ultimate
+sudo snap install --classic notable
+sudo snap install --classic nvim
 
 sudo snap install\
     bitwarden\
     brave\
-    codium\
     firefox\
-    intellij-idea-ultimate\
-    notable\
-    nvim\
     signal-desktop\
     slack\
     spotify\
