@@ -39,3 +39,7 @@ nmap N Nzzzv
 
 map <leader>y [["+y]]
 map <leader>Y [["+Y]]
+
+map L $
+map H ^
+

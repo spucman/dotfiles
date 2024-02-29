@@ -9,6 +9,10 @@ alias upHosts='python3 updateHostFile.py -b -r --extensions adware malware faken
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
+if (( $+commands[zoxide] )); then
+    eval "$(zoxide init --cmd cd zsh)"
+fi
+
 # power completion / abbreviation expansion / buffer expansion
 # see http://zshwiki.org/home/examples/zleiab for details
 # less risky than the global aliases but powerful as well

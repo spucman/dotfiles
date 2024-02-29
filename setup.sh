@@ -48,6 +48,8 @@ mkdir -p ~/.ssh/
 
 chsh -s $(which zsh)
 
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+
 #### OMZ
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
