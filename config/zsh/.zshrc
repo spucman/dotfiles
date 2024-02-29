@@ -42,6 +42,8 @@ CASE_SENSITIVE="true"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# ZSH_TMUX_AUTOSTART="true"
+
 plugins=(gitfast tmux spuc)
 
 source $ZSH/oh-my-zsh.sh
