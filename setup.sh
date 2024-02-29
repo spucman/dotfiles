@@ -69,3 +69,4 @@ curl https://go.dev/dl/go1.22.0.linux-amd64.tar.gz | tar -C /usr/local -xzf go1.
 #visualvm
 #java ??
 # hosts
+# 150x50 term
