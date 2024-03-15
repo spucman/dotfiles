@@ -18,6 +18,7 @@ nmap <leader>s/ <Action>(Find)
 nmap <leader>sw <Action>(FindInPath)
 nmap <leader>o <Action>(OptimizeImports)
 nmap <leader>f <Action>(ReformatCode)
+nmap <leader>of <Action>(OptimizeImports) | <Action>(ReformatCode)
 nmap <leader>hm <Action>(ToggleBookmarkWithMnemonic)
 nmap <leader>ha <Action>(ShowTypeBookmarks)
 nmap <leader>hr <Action>(ToggleBookmark)
@@ -30,6 +31,8 @@ nmap <leader>h6 <Action>(GotoBookmark6)
 nmap <leader>h7 <Action>(GotoBookmark7)
 nmap <leader>h8 <Action>(GotoBookmark8)
 nmap <leader>h9 <Action>(GotoBookmark9)
+nmap <leader>er <Action>(RenameElement)
+nmap <leader>gr <Action>(GotoDeclaration)
 
 vmap J :m '>+1<CR>gv=gv
 vmap K :m '<-2<CR>gv=gv

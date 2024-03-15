@@ -44,7 +44,7 @@ CASE_SENSITIVE="true"
 
 # ZSH_TMUX_AUTOSTART="true"
 
-plugins=(gitfast tmux spuc)
+plugins=(gitfast tmux terraform spuc dt)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,3 +76,6 @@ export LANG=en_US.UTF-8
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/stefan_puchmann/.pulumi/bin
