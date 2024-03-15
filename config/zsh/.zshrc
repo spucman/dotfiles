@@ -77,5 +77,3 @@ export LANG=en_US.UTF-8
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# add Pulumi to the PATH
-export PATH=$PATH:/home/stefan_puchmann/.pulumi/bin
