@@ -31,9 +31,10 @@ nmap <leader>h6 <Action>(GotoBookmark6)
 nmap <leader>h7 <Action>(GotoBookmark7)
 nmap <leader>h8 <Action>(GotoBookmark8)
 nmap <leader>h9 <Action>(GotoBookmark9)
-nmap <leader>er <Action>(RenameElement)
+nmap <leader>rn <Action>(RenameElement)
 nmap <leader>gr <Action>(GotoDeclaration)
-
+nmap [d <Action>(GotoPreviousError)
+nmap ]d <Action>(GotoNextError)
 vmap J :m '>+1<CR>gv=gv
 vmap K :m '<-2<CR>gv=gv
 
