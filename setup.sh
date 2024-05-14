@@ -17,7 +17,8 @@ sudo apt install -y zsh\
     gzip\
     libfuse2\
     fd-find\
-    xsel
+    xsel\
+    build-essential
 
 ### Install snap
 
