@@ -77,6 +77,11 @@ chars = "\f"
 key = "K"
 mods = "Control"
 
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Control|Shift"
+
 [selection]
 save_to_clipboard = true
 
