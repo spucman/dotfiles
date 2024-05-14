@@ -13,6 +13,7 @@ set incsearch
 """ Mappings =================
 
 nmap <leader>sf <Action>(GotoFile)
+nmap <leader>sg <Action>(com.mituuz.fuzzier.Fuzzier)
 nmap <leader>sc <Action>(GotoClass)
 nmap <leader>s/ <Action>(Find)
 nmap <leader>sw <Action>(FindInPath)
@@ -32,6 +33,7 @@ nmap <leader>h7 <Action>(GotoBookmark7)
 nmap <leader>h8 <Action>(GotoBookmark8)
 nmap <leader>h9 <Action>(GotoBookmark9)
 nmap <leader>rn <Action>(RenameElement)
+nmap <leader>rc <Action>(RunClass)
 nmap <leader>gr <Action>(GotoDeclaration)
 nmap [d <Action>(GotoPreviousError)
 nmap ]d <Action>(GotoNextError)
