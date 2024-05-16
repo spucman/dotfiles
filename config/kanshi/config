@@ -1,0 +1,22 @@
+# swaymsg -t get_outputs
+
+profile Notebook {
+    output eDP-1 mode 1920x1200@60.002Hz position 0,0
+}
+
+profile HO {
+    output eDP-1 disable
+    output "Dell Inc. DELL U2713HM 7JNY53C5416S" mode 2560x1440@59.951Hz position 0,0
+    output "Goldstar Company Ltd LG HDR 4K 0x000030A8" mode 3840x2160@60Hz position 2560,0 scale 1.5
+    exec swaymsg workspace 1, move to '"Dell Inc. DELL U2713HM 7JNY53C5416S"'
+    exec swaymsg workspace 7, move to '"Goldstar Company Ltd LG HDR 4K 0x000030A8"'
+}
+
+profile OSS {
+    output eDP-1 mode 1920x1200@60.002Hz position 0,0
+    output "Dell Inc. DELL U3419W 7CJ86T2" mode 3440x1440@59.973Hz position 1920,0
+    exec swaymsg workspace 1, move to '"Dell Inc. DELL U3419W 7CJ86T2"'
+    exec swaymsg workspace 2, move to '"Dell Inc. DELL U3419W 7CJ86T2"'
+    exec swaymsg workspace 3, move to '"Dell Inc. DELL U3419W 7CJ86T2"'
+    exec swaymsg workspace 9, move to eDP-1
+}

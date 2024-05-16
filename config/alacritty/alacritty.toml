@@ -87,6 +87,7 @@ save_to_clipboard = true
 
 [window]
 decorations = "full"
+opacity = 0.94
 
 [window.dimensions]
 columns = 150
