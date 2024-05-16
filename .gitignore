@@ -1,2 +1,2 @@
 tmlr
-
+config/systemd/user/sway-session.target.wants

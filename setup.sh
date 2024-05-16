@@ -26,6 +26,7 @@ sudo snap install --classic codium
 sudo snap install --classic intellij-idea-ultimate
 sudo snap install --classic notable
 sudo snap install --classic nvim
+sudo snap install --classic alacritty
 
 sudo snap install\
     bitwarden\
@@ -34,7 +35,6 @@ sudo snap install\
     slack\
     spotify\
     vlc\
-    zoom-client\
     postman
 
 ## install brave
