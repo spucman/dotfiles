@@ -7,3 +7,7 @@ exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK XDG_CURREN
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
 exec swaymsg -t subscribe '["shutdown"]' && systemctl --user stop sway-session.target
+
+# due to a reload bug restart kanshi manually to avoid wrong display config
+# https://github.com/emersion/kanshi/issues/43
+exec_always "systemctl --user restart kanshi.service"
