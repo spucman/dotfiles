@@ -44,7 +44,7 @@ CASE_SENSITIVE="true"
 
 # ZSH_TMUX_AUTOSTART="true"
 
-plugins=(gitfast tmux terraform spuc dt)
+plugins=(gitfast tmux terraform kubectl spuc dt)
 
 source $ZSH/oh-my-zsh.sh
 
