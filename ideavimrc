@@ -35,6 +35,7 @@ nmap <leader>h9 <Action>(GotoBookmark9)
 nmap <leader>rn <Action>(RenameElement)
 nmap <leader>rc <Action>(RunClass)
 nmap <leader>gr <Action>(GotoDeclaration)
+nmap gi <Action>(GotoImplementation)
 nmap [d <Action>(GotoPreviousError)
 nmap ]d <Action>(GotoNextError)
 vmap J :m '>+1<CR>gv=gv
