@@ -97,6 +97,7 @@ return {
         pyright = {},
         rust_analyzer = {},
         ts_ls = {},
+        jsonls = {},
         html = {},
         htmx = {},
         lua_ls = {
