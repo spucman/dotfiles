@@ -4,6 +4,7 @@ fport() { lsof -nP -i4TCP:"$1" | grep LISTEN }
 
 alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Command}}\t{{.Status}}\t{{.Ports}}"'
 alias dsa='docker stop $(docker ps -a -q)'
+alias drm='docker rm -v $(docker ps --filter status=exited -q)'
 alias encPriv='gocryptfs ~/_priv/pCloud/enc ~/Private'
 alias upHosts='python3 updateHostsFile.py -b -r --extensions adware malware fakenews'
 alias spuc='cd ~/_dev/spucman/'
@@ -32,3 +33,9 @@ export PATH="$PATH:$(go env GOPATH)/bin/"
 if (( $+commands[zoxide] )); then
     eval "$(zoxide init --cmd cd zsh)"
 fi
+
+
+if (( $+commands[bat] )); then
+    alias cat='bat'
+fi
+BAT_THEME='rose-pine'

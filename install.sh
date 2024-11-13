@@ -19,6 +19,7 @@ create_symlink "$CUR_DIR/config/dunst" "$HOME/.config/dunst"
 create_symlink "$CUR_DIR/config/i3status-rust" "$HOME/.config/i3status-rust"
 create_symlink "$CUR_DIR/config/kanshi" "$HOME/.config/kanshi"
 create_symlink "$CUR_DIR/config/systemd" "$HOME/.config/systemd"
+create_symlink "$CUR_DIR/config/bat" "$HOME/.config/bat"
 
 create_symlink "$CUR_DIR/config/gtk-3.0/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
 create_symlink "$CUR_DIR/config/sway/config" "$HOME/.config/sway/config"

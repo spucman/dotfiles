@@ -18,7 +18,8 @@ sudo apt install -y zsh\
     libfuse2\
     fd-find\
     xsel\
-    build-essential
+    build-essential \
+    bat
 
 ### Install snap
 
@@ -52,6 +53,9 @@ mkdir -p ~/_dev/spucman/
 mkdir -p ~/_dev/external/
 mkdir -p ~/_priv/pCloud/
 mkdir -p ~/.ssh/
+mkdir -p ~/.local/bin/
+
+ln -s /usr/bin/batcat ~/.local/bin/bat
 
 ### Manual Installations
 

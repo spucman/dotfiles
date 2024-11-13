@@ -17,7 +17,8 @@ sudo apt install sway\
     fonts-font-awesome\
     kanshi\
     xdg-desktop-portal-wlr\
-    pavucontrol
+    pavucontrol \
+    python3-i3ipc
 
 ## install wayshot
 # https://github.com/waycrate/wayshot
@@ -32,6 +33,9 @@ sudo apt install sway\
  cd i3status-rust
  cargo install --path . --locked
  ./install.sh
+
+## Install autotiling
+https://github.com/nwg-piotr/autotiling
 
 ## Monitor setup
 # https://github.com/swaywm/sway/wiki#Multihead

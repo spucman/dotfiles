@@ -1,4 +1,5 @@
 # Config for sway
+exec_always autotiling
 
 include $HOME/.config/sway/sway.d/*.conf
 
