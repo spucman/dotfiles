@@ -20,6 +20,15 @@ button = "left"
 cmd = "pavucontrol"
 
 [[block]]
+block = "cpu"
+interval = 2
+format = " $icon $utilization "
+format_alt = " $icon $barchart $frequency{ $boost|}($utilization) "
+info_cpu = 50
+warning_cpu = 70
+critical_cpu = 90
+
+[[block]]
 block = "battery"
 format = "$icon $percentage"
 full_format = "$icon $percentage"

@@ -6,10 +6,13 @@ profile Notebook {
 
 profile HO {
     output eDP-1 disable
-    output "Dell Inc. DELL U2713HM 7JNY53C5416S" mode 2560x1440@59.951Hz position 0,0
-    output "LG Electronics LG HDR 4K 0x000030A8" mode 3840x2160@60.000Hz position 2560,0 scale 1.5
-    exec swaymsg workspace 1, move to '"Dell Inc. DELL U2713HM 7JNY53C5416S"'
-    exec swaymsg workspace 7, move to '"LG Electronics LG HDR 4K 0x000030A8"'
+    output "Dell Inc. DELL U3419W 2YF86T2" mode 3440x1440@59.973Hz position 0,0
+    output "LG Electronics LG HDR 4K 0x000030A8" mode 3840x2160@60.000Hz position 3440,0 scale 1.5
+    exec swaymsg workspace 1, move to '"Dell Inc. DELL U3419W 2YF86T2"'
+    exec swaymsg workspace 2, move to '"Dell Inc. DELL U3419W 2YF86T2"'
+    exec swaymsg workspace 3, move to '"Dell Inc. DELL U3419W 2YF86T2"'
+    exec swaymsg workspace 8, move to '"LG Electronics LG HDR 4K 0x000030A8"'
+    exec swaymsg workspace 9, move to '"LG Electronics LG HDR 4K 0x000030A8"'
 }
 
 profile OSS {
@@ -19,4 +22,9 @@ profile OSS {
     exec swaymsg workspace 2, move to '"Dell Inc. DELL P3424WEB 44FBM04"'
     exec swaymsg workspace 3, move to '"Dell Inc. DELL P3424WEB 44FBM04"'
     exec swaymsg workspace 9, move to eDP-1
+}
+
+profile MH {
+    output eDP-1 mode 1920x1200@60.002Hz position 0,0
+    output "Sharp Corporation PN-CD701 0x01010101" mode 3840x2160@59.997Hz position 1920,0 scale 1.5
 }
