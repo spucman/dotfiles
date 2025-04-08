@@ -4,9 +4,9 @@ exec_always autotiling
 include $HOME/.config/sway/sway.d/*.conf
 
 
-exec "systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME; systemctl --user start sway-session.target"
+exec "systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME XDG_CURRENT_DESKTOP WLR_RENDERER; systemctl --user start sway-session.target"
 exec hash dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME XDG_CURRENT_DESKTOP=sway
+     dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME WLR_RENDERER=vulkan XDG_CURRENT_DESKTOP=sway
 exec swaymsg -t subscribe '["shutdown"]' && systemctl --user stop sway-session.target
 
 # due to a reload bug restart kanshi manually to avoid wrong display config
