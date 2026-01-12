@@ -7,7 +7,6 @@ PartOf=sway-session.target
 Type=simple
 ExecStart=/usr/bin/swayidle -w \
           timeout 300 '%h/.local/bin/sway/lock.sh' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
           timeout 1800 'systemctl suspend' \
           before-sleep '%h/.local/bin/sway/lock.sh'
 

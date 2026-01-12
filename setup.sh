@@ -19,7 +19,9 @@ sudo apt install -y zsh\
     fd-find\
     xsel\
     build-essential \
-    bat
+    bat \
+    containerd \
+    git-delta
 
 ### Install snap
 
@@ -75,6 +77,11 @@ curl https://go.dev/dl/go1.22.0.linux-amd64.tar.gz | tar -C /usr/local -xzf go1.
 
 #### Manual tools
 # Manual download: https://www.pcloud.com/download-free-online-cloud-file-storage.html
+
+### nerdctl
+sudo systemctl start containerd
+sudo systemctl enable containerd
+# https://learn.arm.com/install-guides/nerdctl/
 
 #grype
 #ngrok
