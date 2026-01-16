@@ -18,7 +18,9 @@ sudo apt install sway\
     kanshi\
     xdg-desktop-portal-wlr\
     pavucontrol \
-    python3-i3ipc
+    python3-i3ipc \
+    pulsaudio-utils \
+    grim
 
 ## install wayshot
 # https://github.com/waycrate/wayshot
@@ -35,7 +37,8 @@ sudo apt install sway\
  ./install.sh
 
 ## Install autotiling
-https://github.com/nwg-piotr/autotiling
+# https://github.com/nwg-piotr/autotiling
+# install it in /opt and link it to /usr/local/bin
 
 ## Monitor setup
 # https://github.com/swaywm/sway/wiki#Multihead

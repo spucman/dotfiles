@@ -2,15 +2,10 @@ ff () { /usr/bin/find . -iname "$@" ; }
 # fgrep () { find . -type f -iname "$2" -print0 | xargs -0 grep "$1" ; }
 fport() { lsof -nP -i4TCP:"$1" | grep LISTEN } 
 
-alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Command}}\t{{.Status}}\t{{.Ports}}"'
-alias dsa='docker stop $(docker ps -a -q)'
-alias drm='docker rm -v $(docker ps --filter status=exited -q)'
-alias encPriv='gocryptfs ~/_priv/pCloud/enc ~/Private'
 alias upHosts='python3 updateHostsFile.py -b -r --extensions adware malware fakenews'
 alias spuc='cd ~/_dev/spucman/'
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-
 
 # power completion / abbreviation expansion / buffer expansion
 # see http://zshwiki.org/home/examples/zleiab for details
@@ -34,8 +29,22 @@ if (( $+commands[zoxide] )); then
     eval "$(zoxide init --cmd cd zsh)"
 fi
 
-
 if (( $+commands[bat] )); then
+    BAT_THEME='rose-pine'
     alias cat='bat'
 fi
-BAT_THEME='rose-pine'
+
+if (( $+commands[nerdctl] )); then
+  alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Command}}\t{{.Status}}\t{{.Ports}}"'
+  alias dsa='docker stop $(docker ps -a -q)'
+  alias drm='docker rm -v $(docker ps --filter status=exited -q)'
+fi
+
+# (only on dev machines)
+if (( $+commands[nerdctl] )); then
+    alias nerdctl='sudo nerdctl'
+fi
+
+if (( $+commands[gocryptfs] )); then
+  alias encPriv='gocryptfs ~/_priv/pCloud/enc ~/Private'
+fi

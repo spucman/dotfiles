@@ -79,9 +79,11 @@ curl https://go.dev/dl/go1.22.0.linux-amd64.tar.gz | tar -C /usr/local -xzf go1.
 # Manual download: https://www.pcloud.com/download-free-online-cloud-file-storage.html
 
 ### nerdctl
+
 sudo systemctl start containerd
 sudo systemctl enable containerd
 # https://learn.arm.com/install-guides/nerdctl/
+sudo ln -s ~/_dev/spucman/dotfiles/etc/systemd/system/buildkit.service /etc/systemd/system/buildkit.service
 
 #grype
 #ngrok

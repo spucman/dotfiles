@@ -5,7 +5,15 @@ FILE_NAME="$HOME/tmp/_sway_lock_image.png"
 rm $FILE_NAME 2> /dev/null
 
 FOCUSED_OUTPUT=$(swaymsg -t get_outputs --raw | jq '. | map(select(.focused == true)) | .[0].name' -r)
-wayshot -o "$FOCUSED_OUTPUT" -f $TMP_FILE_NAME
+
+if which wayshot >/dev/null 2>&1; then
+    wayshot -o "$FOCUSED_OUTPUT" -f $TMP_FILE_NAME
+else
+    if which grim >/dev/null 2>&1; then
+        grim -o "$FOCUSED_OUTPUT" $TMP_FILE_NAME
+    fi
+fi
+
 ffmpeg -i $TMP_FILE_NAME -filter_complex "gblur=sigma=50" $FILE_NAME -y
 rm $TMP_FILE_NAME 2> /dev/null
 swaylock -f -i $FILE_NAME

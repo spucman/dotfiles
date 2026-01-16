@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 create_symlink() 
 {
@@ -31,5 +31,7 @@ mkdir -p "$HOME/.local/bin/sway"
 
 create_symlink "$CUR_DIR/config/sway/scripts/lock.sh" "$HOME/.local/bin/sway/lock.sh"
 create_symlink "$CUR_DIR/config/sway/wallpaper" "$HOME/Pictures/wallpaper"
+
+bat cache --build
 
 source "$CUR_DIR/config/zsh/install.sh"
