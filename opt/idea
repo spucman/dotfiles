@@ -1,0 +1,1 @@
+nohup /home/stefan_puchmann/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea > /dev/null 2>&1 &
