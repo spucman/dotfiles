@@ -30,3 +30,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "130"
 vim.o.clipboard = 'unnamedplus'
+
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function() pcall(vim.treesitter.start) end,
+})

@@ -21,7 +21,11 @@ sudo apt install -y zsh\
     build-essential \
     bat \
     containerd \
-    git-delta
+    git-delta \
+    slirp4netns \
+    fuse-overlayfs \
+    uidmap \
+    podman
 
 ### Install snap
 
@@ -83,7 +87,19 @@ curl https://go.dev/dl/go1.22.0.linux-amd64.tar.gz | tar -C /usr/local -xzf go1.
 sudo systemctl start containerd
 sudo systemctl enable containerd
 # https://learn.arm.com/install-guides/nerdctl/
-sudo ln -s ~/_dev/spucman/dotfiles/etc/systemd/system/buildkit.service /etc/systemd/system/buildkit.service
+# rootful mode
+# sudo ln -s ~/_dev/spucman/dotfiles/etc/systemd/system/buildkit.service /etc/systemd/system/buildkit.service
+
+# rootless mode
+# (if enabled)
+# sudo systemctl stop containerd
+# sudo systemctl disable containerd
+# install
+# containerd-rootless-setuptool.sh install
+# systemctl --user start containerd 
+# systemctl --user enable containerd
+#
+#
 
 #grype
 #ngrok

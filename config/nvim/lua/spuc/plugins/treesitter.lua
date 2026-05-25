@@ -1,12 +1,10 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter-textobjects",
-	},
-	build = ":TSUpdate",
-	config = function()
-		require("nvim-treesitter.configs").setup({
-			ensure_installed = {
+	{
+		"nvim-treesitter/nvim-treesitter",
+		lazy = false,
+		build = ":TSUpdate",
+		config = function()
+			require("nvim-treesitter").install({
 				"go",
 				"lua",
 				"rust",
@@ -26,9 +24,7 @@ return {
 				"json",
 				"python",
 				"sql",
-			},
-			auto_install = false,
-			highlight = { enable = true },
-		})
-	end,
+			})
+		end,
+	},
 }

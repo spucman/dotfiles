@@ -19,7 +19,7 @@ nmap <leader>s/ <Action>(Find)
 nmap <leader>sw <Action>(FindInPath)
 nmap <leader>o <Action>(OptimizeImports)
 nmap <leader>f <Action>(ReformatCode)
-nmap <leader>of <Action>(OptimizeImports) | <Action>(ReformatCode)
+nmap <leader>oi <Action>(OptimizeImports)<Action>(ReformatCode)
 nmap <leader>hm <Action>(ToggleBookmarkWithMnemonic)
 nmap <leader>ha <Action>(ShowTypeBookmarks)
 nmap <leader>hr <Action>(ToggleBookmark)
@@ -43,6 +43,8 @@ vmap K :m '<-2<CR>gv=gv
 
 nmap n nzzzv
 nmap N Nzzzv
+
+map <leader>ai <Action>(copilot.chat.inline)
 
 map L $
 map H ^
