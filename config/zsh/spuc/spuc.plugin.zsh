@@ -73,3 +73,17 @@ fi
 if (( $+commands[nvim] )); then
     export EDITOR=nvim
 fi
+
+
+if (( $+commands[headroom] )); then
+    if (( $+commands[claude] )); then
+        alias claude-headroom='headroom wrap claude'
+        alias klaus='ANTHROPIC_BASE_URL=http://localhost:8787 claude'
+        alias chead='ANTHROPIC_BASE_URL=http://localhost:8787 claude'
+    fi
+    
+    if (( $+commands[opencode] )); then
+        alias opencode-headroom='headroom wrap opencode'
+        alias ohead='OPENAI_BASE_URL=http://localhost:8788 opencode'
+    fi
+fi

@@ -1,0 +1,76 @@
+{
+  // Requires extension: vscodevim.vim
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<leader>", "p", "v"], "commands": ["workbench.view.explorer"] },
+
+    { "before": ["j"], "after": ["g", "j"] },
+    { "before": ["k"], "after": ["g", "k"] },
+
+    { "before": ["H"], "after": ["^"] },
+    { "before": ["L"], "after": ["$"] },
+
+    { "before": ["[", "d"], "commands": ["editor.action.marker.prevInFiles"] },
+    { "before": ["]", "d"], "commands": ["editor.action.marker.nextInFiles"] },
+    { "before": ["<leader>", "e"], "commands": ["editor.action.showHover"] },
+    { "before": ["<leader>", "q"], "commands": ["workbench.actions.view.problems"] },
+
+    { "before": ["<leader>", "f"], "commands": ["editor.action.formatDocument"] },
+
+    { "before": ["n"], "after": ["n", "z", "z", "z", "v"] },
+    { "before": ["N"], "after": ["N", "z", "z", "z", "v"] },
+
+    { "before": ["<leader>", "y"], "after": ["y"] },
+    { "before": ["<leader>", "Y"], "after": ["Y"] },
+    { "before": ["<leader>", "p"], "after": ["p"] },
+    { "before": ["<leader>", "P"], "after": ["P"] },
+
+    { "before": ["<leader>", "r", "n"], "commands": ["editor.action.rename"] },
+    { "before": ["<leader>", "c", "a"], "commands": ["editor.action.codeAction"] },
+    { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["g", "r", "D"], "commands": ["editor.action.revealDeclaration"] },
+    { "before": ["<leader>", "d", "s"], "commands": ["workbench.action.gotoSymbol"] },
+    { "before": ["<leader>", "w", "s"], "commands": ["workbench.action.showAllSymbols"] },
+    { "before": ["<leader>", "D"], "commands": ["editor.action.goToTypeDefinition"] },
+    { "before": ["<leader>", "t", "h"], "commands": ["editor.action.toggleInlayHints"] },
+
+    // Telescope equivalents (closest VS Code built-ins)
+    { "before": ["<leader>", "?"], "commands": ["workbench.action.openRecent"] },
+    { "before": ["<leader>", "<space>"], "commands": ["workbench.action.showAllEditorsByMostRecentlyUsed"] },
+    { "before": ["<leader>", "/"], "commands": ["actions.find"] },
+    { "before": ["<leader>", "s", "/"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "s", "s"], "commands": ["workbench.action.showCommands"] },
+    { "before": ["<leader>", "g", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<leader>", "s", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<leader>", "s", "h"], "commands": ["workbench.action.showCommands"] },
+    { "before": ["<leader>", "s", "w"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "s", "g"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "s", "G"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "s", "d"], "commands": ["workbench.actions.view.problems"] },
+    { "before": ["<leader>", "s", "r"], "commands": ["workbench.action.showCommands"] },
+
+    // Harpoon approximations in plain VS Code
+    { "before": ["<leader>", "h", "m"], "commands": ["workbench.action.pinEditor"] },
+    { "before": ["<leader>", "h", "a"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<leader>", "h", "n"], "commands": ["workbench.action.nextEditor"] },
+    { "before": ["<leader>", "h", "p"], "commands": ["workbench.action.previousEditor"] },
+    { "before": ["h", "1"], "commands": ["workbench.action.openEditorAtIndex1"] },
+    { "before": ["h", "2"], "commands": ["workbench.action.openEditorAtIndex2"] },
+    { "before": ["h", "3"], "commands": ["workbench.action.openEditorAtIndex3"] },
+    { "before": ["h", "4"], "commands": ["workbench.action.openEditorAtIndex4"] },
+    { "before": ["h", "5"], "commands": ["workbench.action.openEditorAtIndex5"] }
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["H"], "after": ["^"] },
+    { "before": ["L"], "after": ["$"] },
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["<leader>", "y"], "after": ["y"] },
+    { "before": ["<leader>", "c", "a"], "commands": ["editor.action.codeAction"] }
+  ]
+}

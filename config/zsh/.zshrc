@@ -44,7 +44,7 @@ CASE_SENSITIVE="true"
 
 # ZSH_TMUX_AUTOSTART="true"
 
-plugins=(gitfast tmux terraform kubectl spuc dt)
+plugins=(gitfast tmux terraform kubectl spuc dt herdr)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,3 +89,29 @@ export PATH=/home/localstefanpuchmann/.opencode/bin:$PATH
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# >>> headroom persistent env >>>
+export HEADROOM_PORT="8787"
+export HEADROOM_HOST="127.0.0.1"
+export HEADROOM_MODE="token"
+export HEADROOM_BACKEND="anthropic"
+export HEADROOM_TELEMETRY="off"
+export ENABLE_TOOL_SEARCH="true"
+export COPILOT_PROVIDER_TYPE="anthropic"
+export COPILOT_PROVIDER_BASE_URL="http://127.0.0.1:8787"
+# <<< headroom persistent env <<<
+
+# jdtls (Java LSP) requires JDK 25+ (osgi.ee=JavaSE,version=25) — pin independently of project JAVA_HOME/.sdkmanrc.
+# Dynamically picks the highest installed SDKMAN JDK candidate with major version >= 25.
+JDTLS_JDK_CANDIDATE="$(
+  for d in "$HOME"/.sdkman/candidates/java/*/; do
+    v="$(basename "$d")"
+    major="${v%%.*}"
+    [[ "$major" =~ ^[0-9]+$ ]] || continue
+    (( major >= 25 )) && echo "$v"
+  done | sort -V | tail -n1
+)"
+if [[ -n "$JDTLS_JDK_CANDIDATE" ]]; then
+  export JDTLS_JAVA_HOME="$HOME/.sdkman/candidates/java/$JDTLS_JDK_CANDIDATE"
+fi
+unset JDTLS_JDK_CANDIDATE
